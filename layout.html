@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+</head>
+
+<style>
+    body {
+        background-color: #D3756B;
+        padding: 2px;
+
+    }
+
+    header {
+        /*border: 2px solid black;*/
+        background-color: #A75D5D;
+        border-radius: 40px;
+        padding: 5px;
+        margin: 3px;
+
+
+
+    }
+
+    footer {
+        /*border: 2px solid black;*/
+        background-color: #A75D5D;;
+        text-align: center;
+        padding: 10px;
+        margin: 3px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 3fr;
+
+        grid-auto-rows: minmax(100px, auto);
+
+    }
+
+    .item {
+        /*border: 4px solid blue;*/
+
+        margin: 5px;
+
+    }
+
+    #i1 {
+        grid-row: 1/10;
+        background-color: #FFC3A1;
+    }
+
+    #i2 {
+        grid-row: 1/4;
+        grid-column: 2/4;
+        background-color: #F0997D;
+    }
+
+    #i3 {
+        grid-row: 4/10;
+        grid-column: 2/4;
+        background-color: #F0997D;
+    }
+
+    .box {
+        display: grid;
+        justify-content: center;
+        grid-auto-rows: minmax(80px, 60px);
+        grid-auto-columns: minmax(250px, 100px);
+        column-gap: 100px;
+        margin-top: 50px;
+        transition: all .5s;
+        animation: slide 20s;
+        }
+
+    .item1 {
+        border: 4px solid blue;
+        margin: 5px;
+    }
+    .item1:hover{   
+        transform: skewx(10deg) scale(1.2);
+    }
+    #i4 {
+        grid-row: 1/5;
+        grid-column: 1/2;
+        background-color: #FDEBED;
+    }
+
+    #i5 {
+        grid-row: 1/5;
+        grid-column: 2/3;
+        background-color: #FDEBED;
+    }
+
+    #i6 {
+        grid-row: 1/5;
+        grid-column: 3/4;
+        background-color: #FDEBED;
+    }
+
+    .navbar {
+        display:flex;  
+    }
+    .navbar1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-family: cursive;
+        border: 5px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 20px;
+        margin-left: 25px;
+        padding:2px; 
+        transition: all .2s;   
+    }
+        
+    .n1{
+        background-color: transparent;
+        border:5px transparent;
+        margin-left:40px;
+        padding: 5px;
+        border-radius: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration:solid;
+        
+        
+    }
+     .n1:hover{
+        background-color: #D3756B;
+        transform: scale(2);   
+
+    }
+
+
+    .navbar ul {
+        overflow: auto;
+        
+    }
+</style>
+
+<body>
+    <header>
+        <ul class="navbar">
+            <div class="navbar1">
+                <div class="n1">home</div>
+                <div class="n1" > home </div>
+                <div class="n1" > home </div>
+            </div>
+           
+        </ul>
+
+    </header>
+
+    <div class="container">
+        <div class="item" id="i1">grid 1</div>
+        <div class="item" id="i2"> grid 2</div>
+        <div class="item" id="i3"> grid 3
+            <div class="box">
+                <div class="item1" id="i4">grid 4</div>
+                <div class="item1" id="i5"> grid 5</div>
+                <div class="item1" id="i6"> grid 6</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        this is footer
+    </footer>
+
+</body>
+
+</html>
