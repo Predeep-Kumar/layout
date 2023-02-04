@@ -1,144 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="https://kit.fontawesome.com/51398ef278.js" crossorigin="anonymous"></script>
 <style>
-    *{
+    * {
         padding: 0%;
         box-sizing: border-box;
         margin: 0%;
     }
-    .container{
-       /* border: 3px solid black;*/
-       background-color: green;
+
+    .container {
+        /* border: 3px solid black;*/
+        background-color: green;
         padding-left: 5px;
-        
-        
-    }
-
-    .container ul{
         display: flex;
-       
+        
+        
+        
+
     }
 
-    .container ul li{
+    h1 {
+        margin-right: 100px;
+        margin-left: 50px;
+        color: white;
+    }
+    h1 span{
+        color: gold;
+    }
+    .container ul {
+        display: flex;
+
+    }
+
+    .container ul li {
         list-style: none;
         padding: 10px 30px;
         position: relative;
-       
-    }
+        
 
-    .container ul li a{
+    }
+    .container ul li a {
         text-decoration: none;
         color: aliceblue;
         display: inline;
         font-family: cursive;
+        transition: all 0.5s;
+
     }
-    .container ul li a:hover{
-        color: chartreuse;
+
+    .container ul li a:hover {
+        color: rgb(27, 53, 2);
+        
+        
     }
-    .menu{
-       
+
+    .menu {
+
         background-color: rgba(0, 200, 0, 0.992);
         display: block;
         position: absolute;
         top: 100%;
-   
+
         left: 0%;
         text-align: left;
     }
 
-    .menu ul{
+    .menu ul {
         display: block;
-        
-    }
-    .menu ul li{
-        display:none;
+
     }
 
-    .container ul li:hover .menu ul li{
-        display: block;
-    }
-
-    .menu2{
+    .menu ul li {
         display: none;
     }
 
-    .menu ul li:hover .menu2{
+    .container ul li:hover .menu ul li {
+        display: block;
+    }
+
+    .menu2 {
+        display: none;
+    }
+
+    .menu ul li:hover .menu2 {
         background-color: rgba(0, 200, 0, 0.992);
         position: absolute;
-        display:block;
-        top:0px;
+        display: block;
+        top: 0px;
         left: 125px
     }
-  
+    .searchbar{
+        display: block;
+        margin-left: 250px;
+        margin-top: auto;
+        margin-bottom: auto;
+        border-radius: 10px;
         
+    }
+    .searchbar i{
+        margin-left: 20px;
+        cursor: pointer;
+        color: white;
+        /*border-bottom : 2px solid white ;*/
+        transition: all .2s;
+        
+    }
+    .searchbar i:hover{
+        color: black;
+        transform: scale(1.5);
+    }
 </style>
+
 <body>
     <div class="container">
+        <h1>WEBSITE<span>NAME</span></h1>
         <ul>
             <li><a href="#">home</a>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">welcome</a>
-                    
-                        <div class="menu2">
-                            <ul>
-                                <li><a href="#">hello</a></li>
-                                
-                                <li><a href="#">hello </a></li>
-                                
-                                <li><a href="#">hello</a></li>
-                              
-                            </ul>
-                        </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">welcome</a>
+
+                            <div class="menu2">
+                                <ul>
+                                    <li><a href="#">hello</a></li>
+
+                                    <li><a href="#">hello </a></li>
+
+                                    <li><a href="#">hello</a></li>
+
+                                </ul>
+                            </div>
 
 
 
 
-                    </li>
-                    
-                    <li><a href="#">welcome </a></li>
-                    
-                    <li><a href="#">welcome</a></li>
-                    
-                    <li><a href="#">welcome</a></li>
+                        </li>
 
-                  
+                        <li><a href="#">welcome </a></li>
+
+                        <li><a href="#">welcome</a></li>
+
+                        <li><a href="#">welcome</a></li>
 
 
-                </ul>
-            </div>
+
+
+                    </ul>
+                </div>
             </li>
             <li><a href="#">home</a>
                 <div class="menu">
                     <ul>
                         <li><a href="#">welcome</a></li>
-                        
+
                         <li><a href="#">welcome</a></li>
-                        
+
                         <li><a href="#">welcome</a></li>
-                        
+
                         <li><a href="#">welcome</a></li>
-    
-                      
-    
-    
+
+
+
+
                     </ul>
                 </div>
-                </li>
+            </li>
 
 
             <li><a href="#">home</a></li>
             <li><a href="#">home</a></li>
             <li><a href="#">home</a></li>
         </ul>
+        <div class="searchbar">
+            <input type="text" placeholder="serachbar" ><i class="fa fa-search"></i>
+        </div>
+        
 
     </div>
-    
+
 </body>
+
 </html>
